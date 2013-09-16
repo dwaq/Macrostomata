@@ -7,10 +7,10 @@ The name of this project, Macrostomata, is the order of snakes that includes the
 
 * macrostomata.py the main python code running on the Raspberry Pi
 * dropboxBackgroundImageUpload.py background task that takes multiple images over a period of time
-* dropbox_token.py contains the Dropbox access token (an example is given)
+* dropbox_token.py contains the Dropbox access token (a template is given)
 * create-dropbox_token.py a script that creates "dropbox_token.py" by using your Dropbox developer account details
 * pushover.py sends a push notification using Pushover
-* pushover_tokens.py  contains the application and user tokens to use the Pushover API (an example is given)
+* pushover_tokens.py  contains the application and user tokens to use the Pushover API (a template is given)
 * create-pushover_tokens.py a script that creates "pushover_tokens.py" by using your Pushover account details
 * icon.png my personal icon for the Pushover app
 * jeenode.ino the Arduino code for the JeeNode
