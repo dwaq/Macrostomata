@@ -1,7 +1,7 @@
 import sys
 from dropbox_token import access_token
 import dropbox
-from time import localtime, strftime, sleep
+from time import localtime, strftime, time, sleep
 import subprocess
 import os
 
@@ -16,12 +16,6 @@ if (3 <= len(sys.argv) <= 4):
 if (len(sys.argv) == 4):
     period = int(sys.argv[3])
 
-# loop takes 6 seconds to run on Raspbery Pi
-# ensure period is never negative so sleep() can run
-period = period - 6
-if period<0:
-     period = 0
-
 # class that lets you make Dropbox API calls
 client = dropbox.client.DropboxClient(access_token)
 
@@ -29,6 +23,9 @@ def currentDateTime():
     return strftime("%Y-%m-%d---%H-%M-%S", localtime())
 
 for i in range(iterations):
+	# get time at beginning of loop
+	timeStart = time()
+
     # take a picture titled the current date/time
     fileName = currentDateTime()+".jpg"
     subprocess.Popen(['raspistill', '-t', '10', '-n', '-o', fileName]).wait()
@@ -41,6 +38,13 @@ for i in range(iterations):
     # delete the file from local storage after it has been uploaded
     fileInfo.close()
     os.remove(fileName)
+
+    # get time after loop has completed and subtract to find the elapsed time of loop
+    timeElapsed = time() - timeStart
+
+    # if the time of the loop was longer than the defined period of the loop, don't sleep at all
+    if timeElapsed > period:
+		period = 0
 
     # wait in between pictures (won't wait after the last one)
     if i<(iterations):
