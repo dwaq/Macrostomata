@@ -7,10 +7,10 @@ The name of this project, Macrostomata, is the order of snakes that includes the
 
 * [macrostomata.py](https://github.com/dwaq/Macrostomata/blob/master/macrostomata.py) the main python code running on the Raspberry Pi
 * [dropboxBackgroundImageUpload.py](https://github.com/dwaq/Macrostomata/blob/master/dropboxBackgroundImageUpload.py) background task that takes multiple images over a period of time
-* [dropbox_token.py](https://github.com/dwaq/Macrostomata/blob/master/dropbox_token(template).py) contains the Dropbox access token (a template is given)
+* [dropbox_token.py](https://github.com/dwaq/Macrostomata/blob/master/dropbox_token%28template%29.py) contains the Dropbox access token (a template is given)
 * [create-dropbox_token.py](https://github.com/dwaq/Macrostomata/blob/master/create-dropbox_token.py) a script that creates "dropbox_token.py" by using your Dropbox developer account details
 * [pushover.py](https://github.com/dwaq/Macrostomata/blob/master/pushover.py) sends a push notification using Pushover
-* [pushover_tokens.py](https://github.com/dwaq/Macrostomata/blob/master/pushover_tokens(template).py)  contains the application and user tokens to use the Pushover API (a template is given)
+* [pushover_tokens.py](https://github.com/dwaq/Macrostomata/blob/master/pushover_tokens%28template%29.py)  contains the application and user tokens to use the Pushover API (a template is given)
 * [create-pushover_tokens.py](https://github.com/dwaq/Macrostomata/blob/master/create-pushover_tokens.py) a script that creates "pushover_tokens.py" by using your Pushover account details
 * [icon.png](https://github.com/dwaq/Macrostomata/blob/master/icon.png) my personal icon for the Pushover app
 * [jeenode.ino](https://github.com/dwaq/Macrostomata/blob/master/jeenode.ino) the Arduino code for the JeeNode
